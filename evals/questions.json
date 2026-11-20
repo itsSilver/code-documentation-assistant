@@ -1,0 +1,143 @@
+{
+  "sample": {
+    "name": "express",
+    "dir": "evals/sample/express",
+    "source": "https://github.com/expressjs/express/tree/4.21.2"
+  },
+  "questions": [
+    {
+      "id": "q01",
+      "question": "Where is app.use implemented, and how does it handle a sub-app passed to it?",
+      "expect": [{ "path": "lib/application.js", "startLine": 194, "endLine": 249 }]
+    },
+    {
+      "id": "q02",
+      "question": "What does res.send do when the body is an object?",
+      "expect": [{ "path": "lib/response.js", "startLine": 111, "endLine": 236 }]
+    },
+    {
+      "id": "q03",
+      "question": "How does res.json produce its output, and which settings does it read?",
+      "expect": [{ "path": "lib/response.js", "startLine": 250, "endLine": 279 }]
+    },
+    {
+      "id": "q04",
+      "question": "How does res.redirect decide the status code and build the Location header?",
+      "expect": [{ "path": "lib/response.js", "startLine": 946, "endLine": 990 }]
+    },
+    {
+      "id": "q05",
+      "question": "How is the router's request handling loop implemented, i.e. how does it walk through matching layers?",
+      "expect": [{ "path": "lib/router/index.js", "startLine": 136, "endLine": 331 }]
+    },
+    {
+      "id": "q06",
+      "question": "How does a Layer match a request path against its route path?",
+      "expect": [{ "path": "lib/router/layer.js", "startLine": 110, "endLine": 156 }]
+    },
+    {
+      "id": "q07",
+      "question": "How does a Route dispatch a request to the handlers for the right HTTP method?",
+      "expect": [{ "path": "lib/router/route.js", "startLine": 101, "endLine": 154 }]
+    },
+    {
+      "id": "q08",
+      "question": "Where are the app.get, app.post and other HTTP verb methods created?",
+      "expect": [{ "path": "lib/application.js", "startLine": 489, "endLine": 502 }]
+    },
+    {
+      "id": "q09",
+      "question": "How does app.render find and render a view template, and when is the view cache used?",
+      "expect": [{ "path": "lib/application.js", "startLine": 548, "endLine": 610 }]
+    },
+    {
+      "id": "q10",
+      "question": "How does the View class look up a template file in the views directories?",
+      "expect": [{ "path": "lib/view.js", "startLine": 104, "endLine": 123 }]
+    },
+    {
+      "id": "q11",
+      "question": "What default settings does an application get when it is created?",
+      "expect": [{ "path": "lib/application.js", "startLine": 77, "endLine": 134 }]
+    },
+    {
+      "id": "q12",
+      "question": "What does createApplication do when you call express()?",
+      "expect": [{ "path": "lib/express.js", "startLine": 37, "endLine": 57 }]
+    },
+    {
+      "id": "q13",
+      "question": "How is the 'trust proxy' setting compiled into a function?",
+      "expect": [{ "path": "lib/utils.js", "startLine": 215, "endLine": 235 }]
+    },
+    {
+      "id": "q14",
+      "question": "How does req.protocol work when the app sits behind a proxy?",
+      "expect": [{ "path": "lib/request.js", "startLine": 306, "endLine": 324 }]
+    },
+    {
+      "id": "q15",
+      "question": "How does express compute ETags, and where is the etag setting compiled?",
+      "expect": [{ "path": "lib/utils.js", "startLine": 150, "endLine": 172 }]
+    },
+    {
+      "id": "q16",
+      "question": "Which query string parser does express use by default, and how can it be changed?",
+      "expect": [
+        { "path": "lib/utils.js", "startLine": 182, "endLine": 205 },
+        { "path": "lib/middleware/query.js", "startLine": 1, "endLine": 47 }
+      ]
+    },
+    {
+      "id": "q17",
+      "question": "How does res.cookie serialise a cookie and handle signed cookies and maxAge?",
+      "expect": [{ "path": "lib/response.js", "startLine": 862, "endLine": 895 }]
+    },
+    {
+      "id": "q18",
+      "question": "What does res.format do for content negotiation?",
+      "expect": [{ "path": "lib/response.js", "startLine": 684, "endLine": 709 }]
+    },
+    {
+      "id": "q19",
+      "question": "How does app.param register a callback for a route parameter?",
+      "expect": [
+        { "path": "lib/application.js", "startLine": 328, "endLine": 342 },
+        { "path": "lib/router/index.js", "startLine": 97, "endLine": 129 }
+      ]
+    },
+    {
+      "id": "q20",
+      "question": "How are errors passed to error-handling middleware in a Layer?",
+      "expect": [{ "path": "lib/router/layer.js", "startLine": 62, "endLine": 84 }]
+    },
+    {
+      "id": "q21",
+      "question": "What does the init middleware set up on each request and response?",
+      "expect": [{ "path": "lib/middleware/init.js", "startLine": 28, "endLine": 42 }]
+    },
+    {
+      "id": "q22",
+      "question": "Which modules does lib/application.js depend on for routing and rendering?",
+      "expect": [{ "path": "lib/application.js", "startLine": 16, "endLine": 31 }]
+    },
+    {
+      "id": "q23",
+      "question": "How does res.download set the Content-Disposition and send the file?",
+      "expect": [{ "path": "lib/response.js", "startLine": 550, "endLine": 599 }]
+    },
+    { "id": "q24", "question": "How does Express implement WebSocket support?", "expect": [] },
+    { "id": "q25", "question": "Where is the GraphQL schema defined?", "expect": [] },
+    {
+      "id": "q26",
+      "question": "How does this project authenticate users with JWT tokens?",
+      "expect": []
+    },
+    {
+      "id": "q27",
+      "question": "Which database or ORM does the application use to store data?",
+      "expect": []
+    },
+    { "id": "q28", "question": "Where is request rate limiting configured?", "expect": [] }
+  ]
+}

@@ -1,0 +1,1928 @@
+{
+  "info": {
+    "date": "2026-11-20T10:19:44.916Z",
+    "sample": "https://github.com/expressjs/express/tree/4.21.2",
+    "chunks": 127,
+    "top k": 12,
+    "embeddings": "Xenova/bge-small-en-v1.5",
+    "llm": "none"
+  },
+  "summary": {
+    "retrieval": {
+      "questions": 23,
+      "hitAtK": {
+        "1": 0.391304347826087,
+        "3": 0.7391304347826086,
+        "5": 0.8260869565217391,
+        "10": 0.9565217391304348
+      },
+      "mrr": 0.5789855072463768
+    }
+  },
+  "results": [
+    {
+      "id": "q01",
+      "question": "Where is app.use implemented, and how does it handle a sub-app passed to it?",
+      "answerable": true,
+      "rank": 1,
+      "retrieved": [
+        {
+          "path": "lib/application.js",
+          "startLine": 194,
+          "endLine": 264
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 63,
+          "endLine": 95
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 424,
+          "endLine": 437
+        },
+        {
+          "path": "lib/express.js",
+          "startLine": 37,
+          "endLine": 57
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 897,
+          "endLine": 944
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 504,
+          "endLine": 546
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 136,
+          "endLine": 192
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 439,
+          "endLine": 500
+        },
+        {
+          "path": "lib/router/route.js",
+          "startLine": 156,
+          "endLine": 204
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 126,
+          "endLine": 134
+        },
+        {
+          "path": "lib/middleware/init.js",
+          "startLine": 1,
+          "endLine": 42
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 359,
+          "endLine": 421
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "question": "What does res.send do when the body is an object?",
+      "answerable": true,
+      "rank": 2,
+      "retrieved": [
+        {
+          "path": "lib/response.js",
+          "startLine": 378,
+          "endLine": 417
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 111,
+          "endLine": 165
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 627,
+          "endLine": 682
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 460,
+          "endLine": 499
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 238,
+          "endLine": 291
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 501,
+          "endLine": 548
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 650,
+          "endLine": 659
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 354,
+          "endLine": 376
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 337,
+          "endLine": 352
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 218,
+          "endLine": 250
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 946,
+          "endLine": 1011
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 67,
+          "endLine": 109
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "question": "How does res.json produce its output, and which settings does it read?",
+      "answerable": true,
+      "rank": 1,
+      "retrieved": [
+        {
+          "path": "lib/response.js",
+          "startLine": 238,
+          "endLine": 291
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 293,
+          "endLine": 341
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 601,
+          "endLine": 625
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 111,
+          "endLine": 165
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 897,
+          "endLine": 944
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 378,
+          "endLine": 417
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 1155,
+          "endLine": 1179
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 744,
+          "endLine": 809
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 460,
+          "endLine": 499
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 627,
+          "endLine": 682
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 359,
+          "endLine": 421
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 67,
+          "endLine": 109
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "question": "How does res.redirect decide the status code and build the Location header?",
+      "answerable": true,
+      "rank": 2,
+      "retrieved": [
+        {
+          "path": "lib/response.js",
+          "startLine": 897,
+          "endLine": 944
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 946,
+          "endLine": 1011
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 67,
+          "endLine": 109
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 378,
+          "endLine": 417
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 460,
+          "endLine": 499
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 354,
+          "endLine": 376
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 427,
+          "endLine": 484
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 111,
+          "endLine": 165
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 293,
+          "endLine": 341
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 238,
+          "endLine": 291
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 601,
+          "endLine": 625
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 1,
+          "endLine": 65
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "question": "How is the router's request handling loop implemented, i.e. how does it walk through matching layers?",
+      "answerable": true,
+      "rank": 1,
+      "retrieved": [
+        {
+          "path": "lib/router/index.js",
+          "startLine": 193,
+          "endLine": 264
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 136,
+          "endLine": 192
+        },
+        {
+          "path": "lib/router/route.js",
+          "startLine": 101,
+          "endLine": 154
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 136,
+          "endLine": 197
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 63,
+          "endLine": 95
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 260,
+          "endLine": 313
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 439,
+          "endLine": 500
+        },
+        {
+          "path": "lib/router/route.js",
+          "startLine": 206,
+          "endLine": 230
+        },
+        {
+          "path": "lib/router/route.js",
+          "startLine": 53,
+          "endLine": 99
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 252,
+          "endLine": 304
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 194,
+          "endLine": 264
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 424,
+          "endLine": 437
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "question": "How does a Layer match a request path against its route path?",
+      "answerable": true,
+      "rank": 3,
+      "retrieved": [
+        {
+          "path": "lib/router/layer.js",
+          "startLine": 33,
+          "endLine": 50
+        },
+        {
+          "path": "lib/router/route.js",
+          "startLine": 43,
+          "endLine": 51
+        },
+        {
+          "path": "lib/router/layer.js",
+          "startLine": 110,
+          "endLine": 164
+        },
+        {
+          "path": "lib/router/layer.js",
+          "startLine": 52,
+          "endLine": 108
+        },
+        {
+          "path": "lib/router/route.js",
+          "startLine": 101,
+          "endLine": 154
+        },
+        {
+          "path": "lib/router/route.js",
+          "startLine": 1,
+          "endLine": 41
+        },
+        {
+          "path": "lib/router/layer.js",
+          "startLine": 1,
+          "endLine": 31
+        },
+        {
+          "path": "lib/router/route.js",
+          "startLine": 206,
+          "endLine": 230
+        },
+        {
+          "path": "lib/router/route.js",
+          "startLine": 156,
+          "endLine": 204
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 86,
+          "endLine": 135
+        },
+        {
+          "path": "lib/router/route.js",
+          "startLine": 53,
+          "endLine": 99
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 427,
+          "endLine": 484
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "question": "How does a Route dispatch a request to the handlers for the right HTTP method?",
+      "answerable": true,
+      "rank": 3,
+      "retrieved": [
+        {
+          "path": "lib/router/route.js",
+          "startLine": 43,
+          "endLine": 51
+        },
+        {
+          "path": "lib/router/route.js",
+          "startLine": 53,
+          "endLine": 99
+        },
+        {
+          "path": "lib/router/route.js",
+          "startLine": 101,
+          "endLine": 154
+        },
+        {
+          "path": "lib/router/route.js",
+          "startLine": 156,
+          "endLine": 204
+        },
+        {
+          "path": "lib/router/route.js",
+          "startLine": 206,
+          "endLine": 230
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 427,
+          "endLine": 484
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 252,
+          "endLine": 304
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 218,
+          "endLine": 250
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 424,
+          "endLine": 437
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 193,
+          "endLine": 264
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 502,
+          "endLine": 524
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 136,
+          "endLine": 197
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "question": "Where are the app.get, app.post and other HTTP verb methods created?",
+      "answerable": true,
+      "rank": 5,
+      "retrieved": [
+        {
+          "path": "lib/application.js",
+          "startLine": 612,
+          "endLine": 643
+        },
+        {
+          "path": "lib/router/route.js",
+          "startLine": 53,
+          "endLine": 99
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 897,
+          "endLine": 944
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 306,
+          "endLine": 364
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 423,
+          "endLine": 502
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 504,
+          "endLine": 546
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 1,
+          "endLine": 62
+        },
+        {
+          "path": "lib/express.js",
+          "startLine": 37,
+          "endLine": 57
+        },
+        {
+          "path": "lib/router/route.js",
+          "startLine": 156,
+          "endLine": 204
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 424,
+          "endLine": 437
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 366,
+          "endLine": 425
+        },
+        {
+          "path": "lib/middleware/init.js",
+          "startLine": 1,
+          "endLine": 42
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "question": "How does app.render find and render a view template, and when is the view cache used?",
+      "answerable": true,
+      "rank": 5,
+      "retrieved": [
+        {
+          "path": "lib/view.js",
+          "startLine": 52,
+          "endLine": 95
+        },
+        {
+          "path": "lib/view.js",
+          "startLine": 1,
+          "endLine": 50
+        },
+        {
+          "path": "lib/view.js",
+          "startLine": 97,
+          "endLine": 172
+        },
+        {
+          "path": "lib/view.js",
+          "startLine": 174,
+          "endLine": 182
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 548,
+          "endLine": 610
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 1013,
+          "endLine": 1050
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 126,
+          "endLine": 134
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 266,
+          "endLine": 298
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 504,
+          "endLine": 546
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 655,
+          "endLine": 661
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 77,
+          "endLine": 130
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 63,
+          "endLine": 95
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "question": "How does the View class look up a template file in the views directories?",
+      "answerable": true,
+      "rank": 3,
+      "retrieved": [
+        {
+          "path": "lib/view.js",
+          "startLine": 52,
+          "endLine": 95
+        },
+        {
+          "path": "lib/view.js",
+          "startLine": 1,
+          "endLine": 50
+        },
+        {
+          "path": "lib/view.js",
+          "startLine": 97,
+          "endLine": 172
+        },
+        {
+          "path": "lib/view.js",
+          "startLine": 174,
+          "endLine": 182
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 548,
+          "endLine": 610
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 266,
+          "endLine": 298
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 1013,
+          "endLine": 1050
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 504,
+          "endLine": 546
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 650,
+          "endLine": 653
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 77,
+          "endLine": 130
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 655,
+          "endLine": 661
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 126,
+          "endLine": 134
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "question": "What default settings does an application get when it is created?",
+      "answerable": true,
+      "rank": 2,
+      "retrieved": [
+        {
+          "path": "lib/application.js",
+          "startLine": 359,
+          "endLine": 421
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 77,
+          "endLine": 130
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 64,
+          "endLine": 75
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 136,
+          "endLine": 192
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 300,
+          "endLine": 357
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 266,
+          "endLine": 298
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 423,
+          "endLine": 502
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 194,
+          "endLine": 264
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 1,
+          "endLine": 62
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 126,
+          "endLine": 134
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 612,
+          "endLine": 643
+        },
+        {
+          "path": "lib/view.js",
+          "startLine": 52,
+          "endLine": 95
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "question": "What does createApplication do when you call express()?",
+      "answerable": true,
+      "rank": 1,
+      "retrieved": [
+        {
+          "path": "lib/express.js",
+          "startLine": 37,
+          "endLine": 57
+        },
+        {
+          "path": "lib/express.js",
+          "startLine": 1,
+          "endLine": 35
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 266,
+          "endLine": 298
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 612,
+          "endLine": 643
+        },
+        {
+          "path": "Readme.md",
+          "startLine": 79,
+          "endLine": 137
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 194,
+          "endLine": 264
+        },
+        {
+          "path": "lib/express.js",
+          "startLine": 59,
+          "endLine": 116
+        },
+        {
+          "path": "Readme.md",
+          "startLine": 134,
+          "endLine": 176
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 63,
+          "endLine": 95
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 502,
+          "endLine": 524
+        },
+        {
+          "path": "index.js",
+          "startLine": 1,
+          "endLine": 11
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 504,
+          "endLine": 546
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "question": "How is the 'trust proxy' setting compiled into a function?",
+      "answerable": true,
+      "rank": null,
+      "retrieved": [
+        {
+          "path": "lib/application.js",
+          "startLine": 359,
+          "endLine": 421
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 306,
+          "endLine": 364
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 77,
+          "endLine": 130
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 366,
+          "endLine": 425
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 427,
+          "endLine": 484
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 1,
+          "endLine": 62
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 423,
+          "endLine": 502
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 252,
+          "endLine": 304
+        },
+        {
+          "path": "lib/utils.js",
+          "startLine": 142,
+          "endLine": 213
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 1,
+          "endLine": 62
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 300,
+          "endLine": 357
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 661,
+          "endLine": 673
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "question": "How does req.protocol work when the app sits behind a proxy?",
+      "answerable": true,
+      "rank": 1,
+      "retrieved": [
+        {
+          "path": "lib/request.js",
+          "startLine": 306,
+          "endLine": 364
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 252,
+          "endLine": 304
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 366,
+          "endLine": 425
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 194,
+          "endLine": 264
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 77,
+          "endLine": 130
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 136,
+          "endLine": 192
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 427,
+          "endLine": 484
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 359,
+          "endLine": 421
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 545,
+          "endLine": 560
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 300,
+          "endLine": 357
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 627,
+          "endLine": 682
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 612,
+          "endLine": 643
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "question": "How does express compute ETags, and where is the etag setting compiled?",
+      "answerable": true,
+      "rank": 8,
+      "retrieved": [
+        {
+          "path": "lib/express.js",
+          "startLine": 59,
+          "endLine": 116
+        },
+        {
+          "path": "lib/utils.js",
+          "startLine": 215,
+          "endLine": 268
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 359,
+          "endLine": 421
+        },
+        {
+          "path": "lib/utils.js",
+          "startLine": 1,
+          "endLine": 68
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 162,
+          "endLine": 220
+        },
+        {
+          "path": "Readme.md",
+          "startLine": 79,
+          "endLine": 137
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 423,
+          "endLine": 502
+        },
+        {
+          "path": "lib/utils.js",
+          "startLine": 142,
+          "endLine": 213
+        },
+        {
+          "path": "lib/utils.js",
+          "startLine": 270,
+          "endLine": 278
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 486,
+          "endLine": 509
+        },
+        {
+          "path": "Readme.md",
+          "startLine": 1,
+          "endLine": 50
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 306,
+          "endLine": 364
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "question": "Which query string parser does express use by default, and how can it be changed?",
+      "answerable": true,
+      "rank": 1,
+      "retrieved": [
+        {
+          "path": "lib/middleware/query.js",
+          "startLine": 1,
+          "endLine": 47
+        },
+        {
+          "path": "lib/express.js",
+          "startLine": 59,
+          "endLine": 116
+        },
+        {
+          "path": "lib/express.js",
+          "startLine": 1,
+          "endLine": 35
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 218,
+          "endLine": 250
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 1,
+          "endLine": 62
+        },
+        {
+          "path": "lib/utils.js",
+          "startLine": 142,
+          "endLine": 213
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 627,
+          "endLine": 682
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 1,
+          "endLine": 62
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 897,
+          "endLine": 944
+        },
+        {
+          "path": "lib/utils.js",
+          "startLine": 280,
+          "endLine": 286
+        },
+        {
+          "path": "Readme.md",
+          "startLine": 79,
+          "endLine": 137
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 1,
+          "endLine": 61
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "question": "How does res.cookie serialise a cookie and handle signed cookies and maxAge?",
+      "answerable": true,
+      "rank": 1,
+      "retrieved": [
+        {
+          "path": "lib/response.js",
+          "startLine": 838,
+          "endLine": 895
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 811,
+          "endLine": 836
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 378,
+          "endLine": 417
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 460,
+          "endLine": 499
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 1,
+          "endLine": 65
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 601,
+          "endLine": 625
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 684,
+          "endLine": 742
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 501,
+          "endLine": 548
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 187,
+          "endLine": 216
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 1013,
+          "endLine": 1050
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 427,
+          "endLine": 484
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 627,
+          "endLine": 682
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "question": "What does res.format do for content negotiation?",
+      "answerable": true,
+      "rank": 2,
+      "retrieved": [
+        {
+          "path": "lib/response.js",
+          "startLine": 627,
+          "endLine": 682
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 684,
+          "endLine": 742
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 601,
+          "endLine": 625
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 946,
+          "endLine": 1011
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 111,
+          "endLine": 165
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 293,
+          "endLine": 341
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 238,
+          "endLine": 291
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 460,
+          "endLine": 499
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 378,
+          "endLine": 417
+        },
+        {
+          "path": "Readme.md",
+          "startLine": 134,
+          "endLine": 176
+        },
+        {
+          "path": "Readme.md",
+          "startLine": 79,
+          "endLine": 137
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 550,
+          "endLine": 599
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "question": "How does app.param register a callback for a route parameter?",
+      "answerable": true,
+      "rank": 8,
+      "retrieved": [
+        {
+          "path": "lib/router/route.js",
+          "startLine": 43,
+          "endLine": 51
+        },
+        {
+          "path": "lib/router/route.js",
+          "startLine": 206,
+          "endLine": 230
+        },
+        {
+          "path": "lib/router/route.js",
+          "startLine": 156,
+          "endLine": 204
+        },
+        {
+          "path": "lib/router/route.js",
+          "startLine": 53,
+          "endLine": 99
+        },
+        {
+          "path": "lib/router/route.js",
+          "startLine": 1,
+          "endLine": 41
+        },
+        {
+          "path": "lib/router/route.js",
+          "startLine": 101,
+          "endLine": 154
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 63,
+          "endLine": 95
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 300,
+          "endLine": 357
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 136,
+          "endLine": 192
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 194,
+          "endLine": 264
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 504,
+          "endLine": 546
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 423,
+          "endLine": 502
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "question": "How are errors passed to error-handling middleware in a Layer?",
+      "answerable": true,
+      "rank": 2,
+      "retrieved": [
+        {
+          "path": "lib/router/layer.js",
+          "startLine": 33,
+          "endLine": 50
+        },
+        {
+          "path": "lib/router/layer.js",
+          "startLine": 52,
+          "endLine": 108
+        },
+        {
+          "path": "lib/router/layer.js",
+          "startLine": 1,
+          "endLine": 31
+        },
+        {
+          "path": "lib/router/layer.js",
+          "startLine": 110,
+          "endLine": 164
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 63,
+          "endLine": 95
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 439,
+          "endLine": 500
+        },
+        {
+          "path": "lib/router/route.js",
+          "startLine": 156,
+          "endLine": 204
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 260,
+          "endLine": 313
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 193,
+          "endLine": 264
+        },
+        {
+          "path": "lib/router/route.js",
+          "startLine": 206,
+          "endLine": 230
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 378,
+          "endLine": 417
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 338,
+          "endLine": 406
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "question": "What does the init middleware set up on each request and response?",
+      "answerable": true,
+      "rank": 1,
+      "retrieved": [
+        {
+          "path": "lib/middleware/init.js",
+          "startLine": 1,
+          "endLine": 42
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 460,
+          "endLine": 499
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 378,
+          "endLine": 417
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 897,
+          "endLine": 944
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 1,
+          "endLine": 65
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 486,
+          "endLine": 509
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 501,
+          "endLine": 548
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 439,
+          "endLine": 500
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 136,
+          "endLine": 192
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 194,
+          "endLine": 264
+        },
+        {
+          "path": "lib/express.js",
+          "startLine": 37,
+          "endLine": 57
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 63,
+          "endLine": 95
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "question": "Which modules does lib/application.js depend on for routing and rendering?",
+      "answerable": true,
+      "rank": 6,
+      "retrieved": [
+        {
+          "path": "lib/application.js",
+          "startLine": 136,
+          "endLine": 192
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 650,
+          "endLine": 653
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 194,
+          "endLine": 264
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 266,
+          "endLine": 298
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 504,
+          "endLine": 546
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 1,
+          "endLine": 62
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 126,
+          "endLine": 134
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 300,
+          "endLine": 357
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 655,
+          "endLine": 661
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 64,
+          "endLine": 75
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 77,
+          "endLine": 130
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 612,
+          "endLine": 643
+        }
+      ]
+    },
+    {
+      "id": "q23",
+      "question": "How does res.download set the Content-Disposition and send the file?",
+      "answerable": true,
+      "rank": 1,
+      "retrieved": [
+        {
+          "path": "lib/response.js",
+          "startLine": 550,
+          "endLine": 599
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 378,
+          "endLine": 417
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 501,
+          "endLine": 548
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 460,
+          "endLine": 499
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 684,
+          "endLine": 742
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 111,
+          "endLine": 165
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 601,
+          "endLine": 625
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 1,
+          "endLine": 65
+        },
+        {
+          "path": "lib/utils.js",
+          "startLine": 70,
+          "endLine": 124
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 946,
+          "endLine": 1011
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 627,
+          "endLine": 682
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 162,
+          "endLine": 220
+        }
+      ]
+    },
+    {
+      "id": "q24",
+      "question": "How does Express implement WebSocket support?",
+      "answerable": false,
+      "rank": null,
+      "retrieved": [
+        {
+          "path": "lib/express.js",
+          "startLine": 1,
+          "endLine": 35
+        },
+        {
+          "path": "lib/express.js",
+          "startLine": 59,
+          "endLine": 116
+        },
+        {
+          "path": "lib/express.js",
+          "startLine": 37,
+          "endLine": 57
+        },
+        {
+          "path": "Readme.md",
+          "startLine": 79,
+          "endLine": 137
+        },
+        {
+          "path": "Readme.md",
+          "startLine": 1,
+          "endLine": 50
+        },
+        {
+          "path": "Readme.md",
+          "startLine": 134,
+          "endLine": 176
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 612,
+          "endLine": 643
+        },
+        {
+          "path": "Readme.md",
+          "startLine": 47,
+          "endLine": 81
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 1,
+          "endLine": 62
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 266,
+          "endLine": 298
+        },
+        {
+          "path": "lib/router/layer.js",
+          "startLine": 1,
+          "endLine": 31
+        },
+        {
+          "path": "lib/utils.js",
+          "startLine": 215,
+          "endLine": 268
+        }
+      ]
+    },
+    {
+      "id": "q25",
+      "question": "Where is the GraphQL schema defined?",
+      "answerable": false,
+      "rank": null,
+      "retrieved": [
+        {
+          "path": "lib/request.js",
+          "startLine": 306,
+          "endLine": 364
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 63,
+          "endLine": 95
+        },
+        {
+          "path": "Readme.md",
+          "startLine": 1,
+          "endLine": 50
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 187,
+          "endLine": 216
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 136,
+          "endLine": 192
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 627,
+          "endLine": 682
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 1,
+          "endLine": 61
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 64,
+          "endLine": 84
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 427,
+          "endLine": 484
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 1,
+          "endLine": 62
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 439,
+          "endLine": 500
+        },
+        {
+          "path": "lib/express.js",
+          "startLine": 59,
+          "endLine": 116
+        }
+      ]
+    },
+    {
+      "id": "q26",
+      "question": "How does this project authenticate users with JWT tokens?",
+      "answerable": false,
+      "rank": null,
+      "retrieved": [
+        {
+          "path": "lib/response.js",
+          "startLine": 67,
+          "endLine": 109
+        },
+        {
+          "path": "Readme.md",
+          "startLine": 1,
+          "endLine": 50
+        },
+        {
+          "path": "Readme.md",
+          "startLine": 134,
+          "endLine": 176
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 252,
+          "endLine": 304
+        },
+        {
+          "path": "Readme.md",
+          "startLine": 47,
+          "endLine": 81
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 612,
+          "endLine": 643
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 627,
+          "endLine": 682
+        },
+        {
+          "path": "Readme.md",
+          "startLine": 244,
+          "endLine": 260
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 238,
+          "endLine": 291
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 137,
+          "endLine": 185
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 897,
+          "endLine": 944
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 300,
+          "endLine": 357
+        }
+      ]
+    },
+    {
+      "id": "q27",
+      "question": "Which database or ORM does the application use to store data?",
+      "answerable": false,
+      "rank": null,
+      "retrieved": [
+        {
+          "path": "lib/application.js",
+          "startLine": 300,
+          "endLine": 357
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 359,
+          "endLine": 421
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 1,
+          "endLine": 62
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 194,
+          "endLine": 264
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 64,
+          "endLine": 75
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 63,
+          "endLine": 95
+        },
+        {
+          "path": "Readme.md",
+          "startLine": 79,
+          "endLine": 137
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 402,
+          "endLine": 422
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 338,
+          "endLine": 406
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 86,
+          "endLine": 135
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 218,
+          "endLine": 250
+        },
+        {
+          "path": "lib/view.js",
+          "startLine": 52,
+          "endLine": 95
+        }
+      ]
+    },
+    {
+      "id": "q28",
+      "question": "Where is request rate limiting configured?",
+      "answerable": false,
+      "rank": null,
+      "retrieved": [
+        {
+          "path": "lib/request.js",
+          "startLine": 486,
+          "endLine": 509
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 427,
+          "endLine": 484
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 1,
+          "endLine": 62
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 306,
+          "endLine": 364
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 366,
+          "endLine": 425
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 252,
+          "endLine": 304
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 187,
+          "endLine": 216
+        },
+        {
+          "path": "lib/request.js",
+          "startLine": 64,
+          "endLine": 84
+        },
+        {
+          "path": "lib/application.js",
+          "startLine": 77,
+          "endLine": 130
+        },
+        {
+          "path": "lib/response.js",
+          "startLine": 1057,
+          "endLine": 1065
+        },
+        {
+          "path": "lib/router/index.js",
+          "startLine": 309,
+          "endLine": 331
+        },
+        {
+          "path": "lib/router/layer.js",
+          "startLine": 52,
+          "endLine": 108
+        }
+      ]
+    }
+  ]
+}
