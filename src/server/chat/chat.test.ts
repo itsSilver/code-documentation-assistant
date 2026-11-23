@@ -93,6 +93,21 @@ describe("answerQuestion", () => {
     expect(requests[0].messages.at(-1)!.content).toContain("11: const b = 2;");
   });
 
+  it("numbers the code with its real lines, not the stored chunk header", async () => {
+    const { llm, requests } = fakeLlm("ok");
+    const stored = chunk(1, {
+      symbol: "Cart.total",
+      content:
+        "File: src/cart.ts\nSymbol: Cart.total (method)\nLines: 10-12\n\nconst a = 1;\nconst b = 2;\nreturn a + b;",
+    });
+    await run(llm, [stored]);
+    const prompt = requests[0].messages.at(-1)!.content;
+    expect(prompt).toContain("10: const a = 1;");
+    expect(prompt).toContain("12: return a + b;");
+    expect(prompt).not.toContain("13:");
+    expect(prompt).not.toContain("File: src/cart.ts");
+  });
+
   it("says it is not in the repo, without calling the model, when nothing is retrieved", async () => {
     const { llm, requests } = fakeLlm("should not be used");
     const { events, done } = await run(llm, []);

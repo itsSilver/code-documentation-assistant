@@ -60,4 +60,17 @@ export const MIGRATIONS: string[] = [
   ALTER TABLE repos ADD COLUMN indexed_at TEXT;
   UPDATE repos SET indexed_at = datetime('now') WHERE id IN (SELECT DISTINCT repo_id FROM chunks);
   `,
+  // Vectors partitioned by repo, so a nearest-neighbour search only ranks one repo's chunks.
+  // Before, the top k were taken across every repo and filtered afterwards, which could leave a
+  // repo with few or no results. A vec0 table cannot be altered, so it is rebuilt.
+  `
+  CREATE TABLE chunks_vec_old AS
+    SELECT v.rowid AS id, c.repo_id AS repo_id, v.embedding AS embedding
+    FROM chunks_vec v JOIN chunks c ON c.id = v.rowid;
+  DROP TABLE chunks_vec;
+  CREATE VIRTUAL TABLE chunks_vec USING vec0(repo_id integer partition key, embedding float[384]);
+  INSERT INTO chunks_vec (rowid, repo_id, embedding)
+    SELECT id, repo_id, embedding FROM chunks_vec_old;
+  DROP TABLE chunks_vec_old;
+  `,
 ];

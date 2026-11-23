@@ -82,7 +82,7 @@ That maps to Cloud Run, ECS Fargate or Azure Container Apps with managed Postgre
 
 ## Engineering standards
 
-**Followed.** 176 tests next to the code, with the model and embedder injected so they run offline. CI runs lint, typecheck and tests. Strict TypeScript, ESLint and Prettier. Module boundaries as lint rules. Migrations that only append. Secrets out of git and out of logs. A repeatable eval with committed results.
+**Followed.** 179 tests next to the code, with the model and embedder injected so they run offline. CI runs lint, typecheck and tests. Strict TypeScript, ESLint and Prettier. Module boundaries as lint rules. Migrations that only append. Secrets out of git and out of logs. A repeatable eval with committed results.
 
 **Skipped on purpose.** A container image, since SQLite and pnpm keep setup small and it is the first thing I would add. Browser tests against a real server. Auth and rate limiting, since this is a local tool for one user. Error tracking. Evals in CI, since they need a model.
 

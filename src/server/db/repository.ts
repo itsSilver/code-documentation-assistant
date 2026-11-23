@@ -115,7 +115,9 @@ export class Repository {
     const insert = this.db.prepare(
       "INSERT INTO chunks (repo_id, path, start_line, end_line, symbol, content) VALUES (?, ?, ?, ?, ?, ?)",
     );
-    const insertVec = this.db.prepare("INSERT INTO chunks_vec (rowid, embedding) VALUES (?, ?)");
+    const insertVec = this.db.prepare(
+      "INSERT INTO chunks_vec (rowid, repo_id, embedding) VALUES (?, ?, ?)",
+    );
     this.db.transaction(() => {
       for (const c of chunks) {
         const id = insert.run(
@@ -126,7 +128,7 @@ export class Repository {
           c.symbol ?? null,
           c.content,
         ).lastInsertRowid;
-        insertVec.run(BigInt(id), Buffer.from(c.embedding.buffer));
+        insertVec.run(BigInt(id), BigInt(repoId), Buffer.from(c.embedding.buffer));
       }
     })();
   }
@@ -146,11 +148,13 @@ export class Repository {
     return this.db
       .prepare(
         `SELECT c.id, c.path, c.start_line AS startLine, c.end_line AS endLine, c.symbol, c.content
-         FROM (SELECT rowid, distance FROM chunks_vec WHERE embedding MATCH ? AND k = ?) v
+         FROM (
+           SELECT rowid, distance FROM chunks_vec
+           WHERE embedding MATCH ? AND k = ? AND repo_id = ?
+         ) v
          JOIN chunks c ON c.id = v.rowid
-         WHERE c.repo_id = ?
          ORDER BY v.distance`,
       )
-      .all(Buffer.from(embedding.buffer), limit, repoId) as Chunk[];
+      .all(Buffer.from(embedding.buffer), limit, BigInt(repoId)) as Chunk[];
   }
 }

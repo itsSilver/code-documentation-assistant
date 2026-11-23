@@ -24,9 +24,17 @@ export const CONDENSE_SYSTEM_PROMPT = `Rewrite the user's last message as one st
 /** Stops text in a file from closing or opening our own tags. */
 const defang = (text: string) => text.replace(/<(\/?)(chunk|context)/gi, "&lt;$1$2");
 
-/** Every line prefixed with its real line number, so the model can cite lines it can see. */
+/** The header the chunker puts before the code (see withHeader in chunker.ts). */
+const CHUNK_HEADER = /^File: .*\n(?:Symbol: .*\n)?Lines: \d+-\d+\n\n/;
+
+/**
+ * Every line prefixed with its real line number, so the model can cite lines it can see. The
+ * stored header is dropped first: it is not part of the file, and numbering it would shift
+ * every line. The path and symbol it carries are on the tag instead.
+ */
 function formatChunk(c: Chunk): string {
   const numbered = c.content
+    .replace(CHUNK_HEADER, "")
     .split("\n")
     .map((line, i) => `${c.startLine + i}: ${defang(line)}`)
     .join("\n");
